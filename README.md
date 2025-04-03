@@ -78,38 +78,38 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 .
 ├── .husky - husky設定
 ├── .vscode - vscode設定
-└── app - nextjs ページファイル
-    ├── api - nextjs server api route
-    ├── samples - サンプルページ ※削除してください
-    │   ├── page.tsx - ページルートファイル queryなど取得する containerを呼び出す
-    │   ├── [name]-container.tsx - ロジックを管理するファイル presenterを呼び出す
-    │   ├── [name]-presenter.tsx - デザインを管理するファイル ロジックはcontainerで管理
-    │   ├── layout.tsx - ページ個別レイアウト
-    │   └── [name].module.scss
-    ├── layout.tsx 全ページ
-    ├── page.tsx TOPページ
-    ├── index-container.tsx
-    ├── index-presenter.tsx
-    ├── public 画像ファイル管理
-    ├── src
-    │   ├── components
-    │   │   ├── common - 共通コンポーネント
-    │   │   ├── forms - form用コンポーネント
-    │   │   ├── features - 機能単位コンポーネント
-    │   │   └── pages - ページ固有コンポーネント
-    │   ├── constants - 変数管理
-    │   ├── hooks - カスタムフック管理
-    │   ├── libs - パッケージ管理
-    │   ├── mocks - APIのモックデータ管理
-    │   ├── provider
-    │   ├── types - 型定義
-    │   │   ├── api - APIのレスポンス、リクエスト、クエリなどの型を定義
-    │   │   ├── components - コンポーネントのPropsの型を定義
-    │   │   └── pages - ページ毎のpropsの型を定義
-    │   └── utils
-    ├── style - 共通css,scss
-    ├── .env.sample
-    └── .nvmrc - nodeバージョン管理
+├── app - nextjs ページファイル
+│   ├── api - nextjs server api route
+│   ├── samples - サンプルページ ※削除してください
+│   │   ├── page.tsx - ページルートファイル queryなど取得する containerを呼び出す
+│   │   ├── [name]-container.tsx - ロジックを管理するファイル presenterを呼び出す
+│   │   ├── [name]-presenter.tsx - デザインを管理するファイル ロジックはcontainerで管理
+│   │   ├── layout.tsx - ページ個別レイアウト
+│   │   └── [name].module.scss
+│   ├── layout.tsx 全ページ
+│   ├── page.tsx TOPページ
+│   ├── index-container.tsx
+│   ├── index-presenter.tsx
+│   └── public 画像ファイル管理
+├── src
+│   ├── components
+│   │   ├── common - 共通コンポーネント
+│   │   ├── forms - form用コンポーネント
+│   │   ├── features - 機能単位コンポーネント
+│   │   └── pages - ページ固有コンポーネント
+│   ├── constants - 変数管理
+│   ├── hooks - カスタムフック管理
+│   ├── libs - パッケージ管理
+│   ├── mocks - APIのモックデータ管理
+│   ├── provider
+│   ├── types - 型定義
+│   │   ├── api - APIのレスポンス、リクエスト、クエリなどの型を定義
+│   │   ├── components - コンポーネントのPropsの型を定義
+│   │   └── pages - ページ毎のpropsの型を定義
+│   └── utils
+├── style - 共通css,scss
+├── .env.sample
+└── .nvmrc - nodeバージョン管理
 ````
 
 ### container/presenter
