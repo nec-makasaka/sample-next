@@ -1,7 +1,10 @@
+import cx from 'classnames'
 import Link from 'next/link'
 
 import { URLS } from '@/src/constants/urls'
 import { SamplePageProps } from '@/src/types/pages/sample'
+
+import style from './sample.module.scss'
 
 export default function SamplePresenter(props: SamplePageProps) {
 	console.log(props.swr.data)
@@ -15,7 +18,9 @@ export default function SamplePresenter(props: SamplePageProps) {
 			<div>
 				{props.swr.data?.results.map((result) => (
 					<Link href={URLS.samples.detail(result.id)} key={result.id}>
-						<p key={result.id}>{result.message}</p>
+						<p className={cx(style['test'])} key={result.id}>
+							{result.message}
+						</p>
 					</Link>
 				))}
 				<Link href="/">

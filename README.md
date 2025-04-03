@@ -2,15 +2,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## setup
 
-```sh
-npm install
-```
-
 ### node
 
 ```sh
-nvm install 22.14.0
-nvm use 22.14.0
+nvm install v22.14.0
+nvm use v22.14.0
 ```
 
 もしくは下記を`~/.zshrc`に追加。<br>
@@ -33,6 +29,12 @@ enter_directory() {
 }
 ```
 
+### husky
+
+`git push`時に[husky](https://typicode.github.io/husky/)が動作します。<br>
+`@/.husky/pre-push`が実行され、lint, type-checkを行い、エラーがなければpushされます。<br>
+エラー解消後再度`commit`と`push`をお願いします。
+
 ### must install vscode plugins
 
 - [Prettier - Code formatter](https://marketplace.cursorapi.com/items?itemName=esbenp.prettier-vscode)
@@ -46,6 +48,7 @@ enter_directory() {
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
 ```
 
@@ -70,11 +73,48 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## version
+## ディレクトリ構造
+.
+├── .husky - husky設定
+├── .vscode - vscode設定
+└── app - nextjs ページファイル
+    ├── api - nextjs server api route
+    ├── samples - サンプルページ ※削除してください
+    │   ├── page.tsx - ページルートファイル queryなど取得する containerを呼び出す
+    │   ├── [name]-container.tsx - ロジックを管理するファイル presenterを呼び出す
+    │   ├── [name]-presenter.tsx - デザインを管理するファイル ロジックはcontainerで管理
+    │   ├── layout.tsx - ページ個別レイアウト
+    │   └── [name].module.scss
+    ├── layout.tsx 全ページ
+    ├── page.tsx TOPページ
+    ├── index-container.tsx
+    ├── index-presenter.tsx
+    ├── public 画像ファイル管理
+    ├── src
+    │   ├── components
+    │   │   ├── common - 共通コンポーネント
+    │   │   ├── forms - form用コンポーネント
+    │   │   ├── features - 機能単位コンポーネント
+    │   │   └── pages - ページ固有コンポーネント
+    │   ├── constants - 変数管理
+    │   ├── hooks - カスタムフック管理
+    │   ├── libs - パッケージ管理
+    │   ├── mocks - APIのモックデータ管理
+    │   ├── provider
+    │   ├── types - 型定義
+    │   │   ├── api - APIのレスポンス、リクエスト、クエリなどの型を定義
+    │   │   ├── components - コンポーネントのPropsの型を定義
+    │   │   └── pages - ページ毎のpropsの型を定義
+    │   └── utils
+    ├── style - 共通css,scss
+    ├── .env.sample
+    └── .nvmrc - nodeバージョン管理
 
-node: v22.14.0
+### container/presenter
+https://zenn.dev/buyselltech/articles/9460c75b7cd8d1
 
-```
-
-
-```
+#### container
+データ取得やロジック、状態を管理。<br>
+取得したデータなどをpresenterに渡す。<br>
+#### presenter
+データを受け取り、表示する。

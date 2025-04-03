@@ -38,6 +38,7 @@ export default function DefaultLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
+				<div>共通レイアウト</div>
 				<SwrProvider>{children}</SwrProvider>
 			</body>
 		</html>
