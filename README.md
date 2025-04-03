@@ -74,41 +74,43 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## ディレクトリ構造
+````
 .
-├── .husky - husky設定<br>
-├── .vscode - vscode設定<br>
-└── app - nextjs ページファイル<br>
-    ├── api - nextjs server api route<br>
-    ├── samples - サンプルページ ※削除してください<br>
-    │   ├── page.tsx - ページルートファイル queryなど取得する containerを呼び出す<br>
-    │   ├── [name]-container.tsx - ロジックを管理するファイル presenterを呼び出す<br>
-    │   ├── [name]-presenter.tsx - デザインを管理するファイル ロジックはcontainerで管理<br>
-    │   ├── layout.tsx - ページ個別レイアウト<br>
-    │   └── [name].module.scss<br>
-    ├── layout.tsx 全ページ<br>
-    ├── page.tsx TOPページ<br>
-    ├── index-container.tsx<br>
-    ├── index-presenter.tsx<br>
-    ├── public 画像ファイル管理<br>
-    ├── src<br>
-    │   ├── components<br>
-    │   │   ├── common - 共通コンポーネント<br>
-    │   │   ├── forms - form用コンポーネント<br>
-    │   │   ├── features - 機能単位コンポーネント<br>
-    │   │   └── pages - ページ固有コンポーネント<br>
-    │   ├── constants - 変数管理<br>
-    │   ├── hooks - カスタムフック管理<br>
-    │   ├── libs - パッケージ管理<br>
-    │   ├── mocks - APIのモックデータ管理<br>
-    │   ├── provider<br>
-    │   ├── types - 型定義<br>
-    │   │   ├── api - APIのレスポンス、リクエスト、クエリなどの型を定義<br>
-    │   │   ├── components - コンポーネントのPropsの型を定義<br>
-    │   │   └── pages - ページ毎のpropsの型を定義<br>
-    │   └── utils<br>
-    ├── style - 共通css,scss<br>
-    ├── .env.sample<br>
-    └── .nvmrc - nodeバージョン管理<br>
+├── .husky - husky設定
+├── .vscode - vscode設定
+└── app - nextjs ページファイル
+    ├── api - nextjs server api route
+    ├── samples - サンプルページ ※削除してください
+    │   ├── page.tsx - ページルートファイル queryなど取得する containerを呼び出す
+    │   ├── [name]-container.tsx - ロジックを管理するファイル presenterを呼び出す
+    │   ├── [name]-presenter.tsx - デザインを管理するファイル ロジックはcontainerで管理
+    │   ├── layout.tsx - ページ個別レイアウト
+    │   └── [name].module.scss
+    ├── layout.tsx 全ページ
+    ├── page.tsx TOPページ
+    ├── index-container.tsx
+    ├── index-presenter.tsx
+    ├── public 画像ファイル管理
+    ├── src
+    │   ├── components
+    │   │   ├── common - 共通コンポーネント
+    │   │   ├── forms - form用コンポーネント
+    │   │   ├── features - 機能単位コンポーネント
+    │   │   └── pages - ページ固有コンポーネント
+    │   ├── constants - 変数管理
+    │   ├── hooks - カスタムフック管理
+    │   ├── libs - パッケージ管理
+    │   ├── mocks - APIのモックデータ管理
+    │   ├── provider
+    │   ├── types - 型定義
+    │   │   ├── api - APIのレスポンス、リクエスト、クエリなどの型を定義
+    │   │   ├── components - コンポーネントのPropsの型を定義
+    │   │   └── pages - ページ毎のpropsの型を定義
+    │   └── utils
+    ├── style - 共通css,scss
+    ├── .env.sample
+    └── .nvmrc - nodeバージョン管理
+````
 
 ### container/presenter
 https://zenn.dev/buyselltech/articles/9460c75b7cd8d1
