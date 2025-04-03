@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { URLS } from '@/src/constants/urls'
 import { SampleDetailPageProps } from '@/src/types/pages/sample'
 
-export default function SampleDetailPresenter(props: SamplePageProps) {
+export default function SampleDetailPresenter(props: SampleDetailPageProps) {
 	console.log(props.swr.data)
 
 	if (props.swr.isLoading) {
