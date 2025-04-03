@@ -7,8 +7,6 @@ import { SamplePageProps } from '@/src/types/pages/sample'
 import style from './sample.module.scss'
 
 export default function SamplePresenter(props: SamplePageProps) {
-	console.log(props.swr.data)
-
 	if (props.swr.isLoading) {
 		return <div>...loading</div>
 	} else if (props.swr.error) {

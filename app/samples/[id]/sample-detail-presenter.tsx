@@ -4,8 +4,6 @@ import { URLS } from '@/src/constants/urls'
 import { SampleDetailPageProps } from '@/src/types/pages/sample'
 
 export default function SampleDetailPresenter(props: SampleDetailPageProps) {
-	console.log(props.swr.data)
-
 	if (props.swr.isLoading) {
 		return <div>...loading</div>
 	} else if (props.swr.error) {
