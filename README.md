@@ -33,7 +33,7 @@ enter_directory() {
 }
 ```
 
-### vscode plugins
+### must install vscode plugins
 
 - [Prettier - Code formatter](https://marketplace.cursorapi.com/items?itemName=esbenp.prettier-vscode)
 - [ESLint](https://marketplace.cursorapi.com/items?itemName=dbaeumer.vscode-eslint)
