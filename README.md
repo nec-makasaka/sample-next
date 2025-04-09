@@ -73,11 +73,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+
+
 ## ディレクトリ構造
-````
+
+```
 .
 ├── .husky - husky設定
 ├── .vscode - vscode設定
+├── .storybook - storybook設定
 ├── app - nextjs ページファイル
 │   ├── api - nextjs server api route
 │   ├── samples - サンプルページ ※削除してください
@@ -92,20 +96,26 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 │   ├── index-presenter.tsx
 │   └── public 画像ファイル管理
 ├── src
-│   ├── components
-│   │   ├── common - 共通コンポーネント
+│   ├── components - 各種コンポーネント管理,storybook用ファイル(mdx)もコンポーネント毎に配置
+│   │   ├── common - 共通コンポーネント, ロジックはcontainerで管理
 │   │   ├── forms - form用コンポーネント
 │   │   ├── features - 機能単位コンポーネント
-│   │   └── pages - ページ固有コンポーネント
+│   │   └── pages - ページ固有コンポーネント, ロジックはcontainerで管理
 │   ├── constants - 変数管理
 │   ├── hooks - カスタムフック管理
+│   │   └── api - api用フック
 │   ├── libs - パッケージ管理
 │   ├── mocks - APIのモックデータ管理
 │   ├── provider
+│   ├── stores - ステート管理
 │   ├── types - 型定義
 │   │   ├── api - APIのレスポンス、リクエスト、クエリなどの型を定義
-│   │   ├── components - コンポーネントのPropsの型を定義
-│   │   └── pages - ページ毎のpropsの型を定義
+│   │   └── components - コンポーネントのPropsの型を定義
+│   │       ├── common - 共通コンポーネント
+│   │       ├── forms - form用コンポーネント
+│   │       ├── features - 機能単位コンポーネント
+│   │       └── pages - ページ毎のpropsの型を定義
+│   ├── stories - storybook用ファイル(mdx)
 │   └── utils
 ├── style - 共通css,scss
 ├── .env.sample
