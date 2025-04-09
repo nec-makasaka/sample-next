@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Header } from '@/src/components/common/header/Header'
+import { Header } from '@/src/components/examples/header/Header'
 
 import styles from './page.module.scss'
 
