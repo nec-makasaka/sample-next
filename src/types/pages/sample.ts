@@ -1,14 +1,5 @@
-import { SWRResponse } from 'swr'
-
-import {
-	SampleListResponse,
-	SampleResultResponse,
-} from '@/src/types/api/sample'
-
-export interface SamplePageProps {
-	swr: SWRResponse<SampleListResponse>
-}
+import { PageIdProps } from '@/src/types/pages/common'
 
 export interface SampleDetailPageProps {
-	swr: SWRResponse<SampleResultResponse>
+	id: PageIdProps
 }

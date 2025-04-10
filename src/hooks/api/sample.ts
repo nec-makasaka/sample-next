@@ -15,7 +15,7 @@ export const useSampleList = (): SWRResponse<SampleListResponse> => {
 	return { data, error, isLoading, isValidating, mutate }
 }
 
-export const useSampleDetail = (
+export const useFindSample = (
 	id: BaseResponse['id']
 ): SWRResponse<SampleResultResponse> => {
 	const { data, error, isLoading, isValidating, mutate } =

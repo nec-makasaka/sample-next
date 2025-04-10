@@ -1,5 +1,5 @@
-import SampleContainer from '@/app/samples/sample-container'
+import SamplePageServer from '@/src/components/pages/samples/server/SamplePageServer'
 
-export default function SamplePage() {
-	return <SampleContainer />
+export default function Sample() {
+	return <SamplePageServer />
 }
