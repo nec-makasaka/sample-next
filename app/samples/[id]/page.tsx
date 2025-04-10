@@ -1,8 +1,12 @@
 import SimpleDetailPageServer from '@/src/components/pages/samples/detail/server/SimpleDetailPageServer'
 import { AppRouterProps } from '@/src/types/pages/common'
 
-export default function SamplePage({ params, searchParams }: AppRouterProps) {
+export default async function SamplePage({
+	params,
+	searchParams,
+}: AppRouterProps) {
 	console.log(params)
 	console.log(searchParams)
-	return <SimpleDetailPageServer id={params.id} />
+	const { id } = await params
+	return <SimpleDetailPageServer id={id} />
 }
